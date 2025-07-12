@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Universal styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body and background */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url(https://user-images.githubusercontent.com/13468728/233847739-219cb494-c265-4554-820a-bd3424c59065.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Section (login card) */
+        section {
+            position: relative;
+            max-width: 400px;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(55px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 3rem;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 2rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Added some bottom margin for spacing */
+        }
+
+        /* Input box container */
+        .inputbox {
+            position: relative;
+            margin: 30px 0;
+            max-width: 310px;
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Input field */
+        .inputbox input {
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            padding: 0 35px 0 5px;
+            color: #fff;
+        }
+
+        /* Input label (placeholder effect) */
+        .inputbox label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 1rem;
+            pointer-events: none;
+            transition: all 0.5s ease-in-out;
+        }
+
+        /* Label animation on focus/valid input */
+        input:focus ~ label,
+        input:valid ~ label {
+            top: -5px;
+            font-size: 0.8rem; /* Make label slightly smaller when active */
+        }
+
+        /* Icons inside input boxes */
+        .inputbox ion-icon {
+            position: absolute;
+            right: 8px;
+            color: #fff;
+            font-size: 1.2rem;
+            top: 20px;
+        }
+
+        /* Forget password link */
+        .forget {
+            margin: 15px 0 25px; /* Adjusted margin */
+            font-size: 0.85rem;
+            color: #fff;
+            display: flex;
+            justify-content: flex-end; /* Align to the right since "Remember Me" is gone */
+        }
+
+        .forget a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .forget a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main login button */
+        button {
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background-color: rgb(255, 255, 255, 1);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            margin-top: 10px; /* Added some top margin */
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255, 0.8); /* Slightly less transparent on hover */
+        }
+
+        /* Google login button */
+        .google-btn {
+            background-color: #db4437; /* Google red */
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Space between icon and text */
+            margin-top: 15px; /* Space above this button */
+        }
+
+        .google-btn:hover {
+            background-color: #c23321; /* Darker red on hover */
+        }
+
+        .google-btn ion-icon {
+            font-size: 1.3rem; /* Slightly larger icon for Google */
+        }
+
+        /* Register link */
+        .register {
+            font-size: 0.9rem;
+            color: #fff;
+            text-align: center;
+            margin: 25px 0 10px;
+        }
+
+        .register p a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .register p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form>
+            <h1>Login</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="forget">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Log in</button>
+            <button type="button" class="google-btn">
+                <ion-icon name="logo-google"></ion-icon>
+                Login with Google
+            </button>
+            <div class="register">
+                <p>Don't have an account? <a href="hii.html">Register</a></p>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
